@@ -1,13 +1,13 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 
 const AppContext = createContext({
-  counterValue: 7,
+  counterValue: 1,
   setCounterValue: (counterValue: number) => {},
 });
 
 const AppProvider = ({ children }: { children: ReactNode }) => {
   //change context values
-  const [counterValue, setCounterValue] = useState(7);
+  const [counterValue, setCounterValue] = useState(1);
 
   return (
     <AppContext.Provider value={{ counterValue, setCounterValue }}>
